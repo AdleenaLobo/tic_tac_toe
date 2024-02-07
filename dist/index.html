@@ -1,11 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../src/style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="title">
+        <span id="x">X</span>
+        <span id="o">O</span>
+      </div>
+      <div class="selection">
+        <div>PICK PLAYER 1'S MARK</div>
+        <div>
+          <button id="x-active">X</button>
+          <button id="o">O</button>
+        </div>
+        <div>REMEMBER X GOES FIRST</div>
+      </div>
+      <div class="buns">
+        <button id="o-background">NEW GAME (WITH CPU)</button>
+        <button id="x-background">NEW GAME (WITH PLAYER)</button>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
