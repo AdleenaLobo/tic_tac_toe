@@ -181,7 +181,7 @@ button {
 #resetBun {
   background-color: var(--silver);
   color: var(--grayishBlue);
-  width:5rem;
+  width: 5rem;
 }
 
 #turn {
@@ -205,8 +205,8 @@ button {
 }
 
 .grid > button {
-  height: 5em;
-  width: 5em;
+  height: 8rem;
+  width: 9rem;
   margin: 0;
   padding: 0;
   background-color: rgb(39, 57, 68);
@@ -240,8 +240,27 @@ button {
   text-align: center;
 }
 
-#xScore, #oScore , #tieScore{
+#xScore,
+#oScore,
+#tieScore {
   padding-top: 0.5rem;
   font-weight: 500;
   font-size: large;
+}
+.grid > button#x {
+  color: rgb(3, 227, 216);
+  font-size: 5rem;
+  background-color: rgb(39, 57, 68);
+}
+.grid > button#o {
+  color: rgb(250, 208, 58);
+  font-size: 5rem;
+  background-color: rgb(39, 57, 68);
+}
+
+.model {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background-color: rgb(39, 57, 68);
 }
