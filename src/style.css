@@ -257,10 +257,42 @@ button {
   font-size: 5rem;
   background-color: rgb(39, 57, 68);
 }
+.modelWrapper{
+  position: absolute;
+  height: 110%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.264);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .model {
-  position: absolute;
   height: 40%;
   width: 100%;
   background-color: rgb(39, 57, 68);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#quit{
+  background-color: var(--silver);
+  color: rgb(39, 57, 68);
+  font-weight: 700;
+  box-shadow: 0 8px 0 rgb(90, 105, 111) ;
+}
+#nextRound{
+  background-color:rgb(250, 208, 58) ;
+  color:rgb(39, 57, 68);
+  font-weight: 700;
+  box-shadow: 0 8px 0 rgb(179, 140, 1) ;
+}
+
+.model > #x, .model > #o{
+  font-size: 3rem;
+}
+#winnerDeclare{
+  font-size: x-large;
 }
