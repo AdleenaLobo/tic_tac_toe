@@ -2,6 +2,7 @@ import { body, container } from "./initialize";
 import { createGamePageElements } from "./gamePageHtml";
 import { intitalize } from "./getGamePageElem";
 import { gridListener } from "./playXO";
+import { addListenerReset } from "./resetBunGamePahe";
 
 let newpage;
 function gamePage() {
@@ -10,6 +11,7 @@ function gamePage() {
   createGamePageElements();
   intitalize();
   gridListener();
+  addListenerReset();
 }
 function createNewpage() {
   newpage = document.createElement("div");

@@ -1,8 +1,11 @@
 import { body } from "./getGamePageElem";
+import { initialize } from "./quitContinueBun";
 
+
+let wrapper;
 function declareWin(val){
     if(val!=null){
-    let wrapper = document.createElement('div');
+    wrapper = document.createElement('div');
     let model = document.createElement('div');
     model.classList.add("model");
     wrapper.classList.add("modelWrapper");
@@ -13,7 +16,9 @@ function declareWin(val){
     model.appendChild(element2);
     model.appendChild(element3);
     wrapper.appendChild(model);
-    body.appendChild(wrapper);}
+    body.appendChild(wrapper);
+    initialize();
+}
 }
 
 function winner(){
@@ -49,5 +54,5 @@ function quitOrContinue(){
 
 }
 
-export {declareWin};
+export {declareWin, wrapper};
 
