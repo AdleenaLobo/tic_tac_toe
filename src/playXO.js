@@ -5,6 +5,7 @@ import {declareWin} from "./openModel";
 
 let XorO=1;
 let board=[];
+let val;
 
 function gridListener(){
     for(let i = 0 ; i <gridButtons.length;i++){
@@ -42,8 +43,8 @@ function play(){
         updateTurn();
         setID(this , "o");}
         retriveElem();
-        let val = checkingWin();
+        val = checkingWin();
         declareWin(val);
     }
 }
-export {gridListener , board};
+export {gridListener , board , val};

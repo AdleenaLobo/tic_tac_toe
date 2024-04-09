@@ -229,7 +229,7 @@ button {
 .pointer > #xpointer {
   background-color: rgb(3, 227, 216);
 }
-.pointer > #ties {
+.pointer > #ties{
   background-color: var(--silver);
 }
 .pointer > #opointer {
@@ -290,7 +290,7 @@ button {
   box-shadow: 0 8px 0 rgb(179, 140, 1) ;
 }
 
-.model > #x, .model > #o{
+.model > #x, .model > #o , .model > #tie{
   font-size: 3rem;
 }
 #winnerDeclare{

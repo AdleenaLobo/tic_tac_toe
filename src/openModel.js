@@ -31,11 +31,19 @@ function winner(){
 
 function round(val ){
     let rounder = document.createElement('div');
+    
     rounder.textContent = `${val.toUpperCase()} Takes the round`;
+    
+    if(val == "full"){
+        val = "tie";
+        rounder.textContent  = `${val.toUpperCase()} round`;
+    }
     if(val == 'x'){
         rounder.setAttribute("id" , "x");
-    }else{
+    }else if (val == 'o'){
         rounder.setAttribute("id" , "o");
+    }else{
+        rounder.setAttribute("id" , "tie");
     }
     return rounder;
 }

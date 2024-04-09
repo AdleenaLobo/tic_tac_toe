@@ -2,7 +2,6 @@ import { board } from "./playXO";
 
 function checkingWin(){
     
-    console.log(board);
 
         if(board[0]==board[1] && board[1]==board[2]){
             return board[0];
@@ -24,8 +23,9 @@ function checkingWin(){
             board.forEach(element => {
                 if(element!=null){counter++;}
             });
-
-            return counter==9?"full":"empty";
+            if(counter == 9){
+                return "full";
+            }
         }
 }
 

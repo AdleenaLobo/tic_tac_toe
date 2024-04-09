@@ -2,6 +2,7 @@ import { newpage } from "./gamepage";
 import { container } from "./initialize";
 import { wrapper } from "./openModel";
 import { resetButtonState } from "./resetBunGamePahe";
+import { scoreManupilator } from "./manageScores";
 
 let quit;
 let nextRound;
@@ -28,6 +29,7 @@ function goToHome(){
 function goToGamePage(){
     body.removeChild(wrapper);
     resetButtonState();
+    scoreManupilator();
 }
 
 
