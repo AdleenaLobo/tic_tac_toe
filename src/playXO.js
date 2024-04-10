@@ -32,6 +32,7 @@ function retriveElem(){
 
 function play(){
     if(this.textContent == ""){
+        console.log(XorO);
         if(XorO==1){
             this.textContent= "X";
             turns();
@@ -42,9 +43,10 @@ function play(){
         turns();
         updateTurn();
         setID(this , "o");}
+
         retriveElem();
         val = checkingWin();
         declareWin(val);
     }
 }
-export {gridListener , board , val};
+export {gridListener , board, XorO , val};

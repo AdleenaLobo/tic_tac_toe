@@ -1,4 +1,6 @@
 import { body } from "./getGamePageElem";
+import { selectedxOro } from "./homepage-buttons";
+import { cpuOrplayer } from "./playerOrCpu";
 import { initialize } from "./quitContinueBun";
 
 
@@ -9,7 +11,7 @@ function declareWin(val){
     let model = document.createElement('div');
     model.classList.add("model");
     wrapper.classList.add("modelWrapper");
-    const element1 = winner();
+    const element1 = winner(val);
     const element2 = round(val);
     const element3 = quitOrContinue();
     model.appendChild(element1);
@@ -21,10 +23,37 @@ function declareWin(val){
 }
 }
 
-function winner(){
+function winner(val){
     let winner = document.createElement('div');
     winner.setAttribute("id" , "winnerDeclare");
-    winner.textContent = "Player1 win's";
+    console.log(cpuOrplayer);
+    console.log(selectedxOro);
+    console.log(val);
+    if(cpuOrplayer == "player"){
+        if(selectedxOro == "x" && val=="x"){
+            winner.textContent = "Player 1 win's";}
+        else if(selectedxOro == "o" && val=="x"){
+            winner.textContent = "Player 2 win's";
+        }else if(selectedxOro == "x" && val=="o"){
+            winner.textContent = "Player 2 win's";
+        }else if(selectedxOro == "o" && val=="o"){
+            winner.textContent = "Player 1 win's";
+        }else{
+            winner.textContent ="";
+        }}
+        else{
+            if(selectedxOro == "x" && val=="x"){
+                winner.textContent = "Player 1 win's";}
+            else if(selectedxOro == "o" && val=="x"){
+                winner.textContent = "CPU win's";
+            }else if(selectedxOro == "x" && val=="o"){
+                winner.textContent = "CPU win's";
+            }else if(selectedxOro == "o" && val=="o"){
+                winner.textContent = "Player 1 win's";
+            }else{
+                winner.textContent ="";
+            }
+        }
     return winner;
 
 }

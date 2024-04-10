@@ -3,6 +3,7 @@ import { container } from "./initialize";
 import { wrapper } from "./openModel";
 import { resetButtonState } from "./resetBunGamePahe";
 import { scoreManupilator } from "./manageScores";
+import { XorO } from "./playXO";
 
 let quit;
 let nextRound;
@@ -25,6 +26,7 @@ function goToHome(){
     body.removeChild(wrapper);
     body.removeChild(newpage);
     body.appendChild(container);
+    XorO=1;
 }
 function goToGamePage(){
     body.removeChild(wrapper);

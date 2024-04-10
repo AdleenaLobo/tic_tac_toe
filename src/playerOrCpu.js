@@ -1,6 +1,7 @@
 import { playerPlayBun, cpuPlayBun } from "./initialize";
 import { gamePage } from "./gamepage";
 
+let cpuOrplayer;
 let player;
 function playerSelectionBunListener() {
   playerPlayBun.addEventListener("click", () => {
@@ -16,6 +17,12 @@ function playerSelectionBunListener() {
 
 function selected() {
   player = this;
+  let className = this.getAttribute("id");
+  if(className == "o-background"){
+    cpuOrplayer = "cpu";
+  }else{
+    cpuOrplayer="player";
+  }
 }
 
-export { player, playerSelectionBunListener };
+export { player,cpuOrplayer, playerSelectionBunListener };

@@ -18,6 +18,15 @@ function checkingWin(){
         if(board[2]==board[4] && board[4]==board[6]){
             return board[2];
         }
+        if(board[0]==board[3] && board[3]==board[6]){
+            return board[0];
+        }
+        if(board[1]==board[4] && board[4]==board[7]){
+            return board[1];
+        }
+        if(board[2]==board[5] && board[5]==board[8]){
+            return board[2];
+        }
         if((board[1]!=null) && (board[3]!=null) && (board[5]!=null) && (board[7]!=null)){
             let counter=0;
             board.forEach(element => {
