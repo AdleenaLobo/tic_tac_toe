@@ -1,5 +1,6 @@
 import { body } from "./getGamePageElem";
 import { selectedxOro } from "./homepage-buttons";
+import { board } from "./playXO";
 import { cpuOrplayer } from "./playerOrCpu";
 import { initialize } from "./quitContinueBun";
 
@@ -74,6 +75,7 @@ function round(val ){
     }else{
         rounder.setAttribute("id" , "tie");
     }
+
     return rounder;
 }
 

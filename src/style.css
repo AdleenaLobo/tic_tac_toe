@@ -107,6 +107,8 @@ button {
   border: none;
   font-size: x-large;
 }
+
+
 #button-container {
   background-color: var(--grayishBlue);
   border-radius: 0.5rem;
@@ -296,3 +298,37 @@ button {
 #winnerDeclare{
   font-size: x-large;
 }
+
+
+@media screen and (max-width: 600px){
+  button{
+    width: 13rem;
+  }
+
+  .grid > button{
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  button{
+    width: 10rem;
+  } 
+  
+  .grid > button{
+    width: 6rem;
+    height: 6rem;
+  }
+  .pointer > div{
+    width: 6rem;
+  }
+  .model > #x, .model > #o, .model > #tie{
+    font-size: 2rem;
+  }
+  #nextRound , #quit{
+    width: 9rem;
+    font-size: 1rem;
+  }
+}
+

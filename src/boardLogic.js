@@ -1,6 +1,6 @@
-import { board } from "./playXO";
 
-function checkingWin(){
+
+function checkingWin(board){
     
 
         if(board[0]==board[1] && board[1]==board[2]){

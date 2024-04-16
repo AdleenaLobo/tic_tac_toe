@@ -3,6 +3,9 @@ import { createGamePageElements } from "./gamePageHtml";
 import { intitalize } from "./getGamePageElem";
 import { gridListener } from "./playXO";
 import { addListenerReset } from "./resetBunGamePahe";
+import { playWithCPU } from "./playAI";
+import { cpuOrplayer } from "./playerOrCpu";
+import { selectedxOro } from "./homepage-buttons";
 
 let newpage;
 function gamePage() {
@@ -11,6 +14,9 @@ function gamePage() {
   createGamePageElements();
   intitalize();
   gridListener();
+  if(cpuOrplayer == "cpu" && selectedxOro!="x"){
+    playWithCPU(newBoard() , 'x');
+  }
   addListenerReset();
 }
 function createNewpage() {

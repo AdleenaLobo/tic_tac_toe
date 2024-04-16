@@ -2,6 +2,9 @@ import { gridButtons } from "./getGamePageElem";
 import { updateTurn } from "./UpdateGamePageElem";
 import { checkingWin } from "./boardLogic";
 import {declareWin} from "./openModel";
+import { cpuOrplayer } from "./playerOrCpu";
+import { selectedxOro } from "./homepage-buttons";
+import { playWithCPU } from "./playAI";
 
 let XorO=1;
 let board=[];
@@ -29,10 +32,19 @@ function retriveElem(){
         return button.getAttribute("id");
     })
 }
+function newBoard(){
+    let boardNew = board;
+    if(board.length == 0){
+        for(let i = 0 ; i < 9 ;i++){
+            boardNew[i] = null;
+        }
+    }
+    return boardNew;
+}
 
 function play(){
+    
     if(this.textContent == ""){
-        console.log(XorO);
         if(XorO==1){
             this.textContent= "X";
             turns();
@@ -44,9 +56,18 @@ function play(){
         updateTurn();
         setID(this , "o");}
 
+
+
         retriveElem();
-        val = checkingWin();
+        val = checkingWin(board);
+        declareWin(val);
+    }
+    if(cpuOrplayer == 'cpu'){
+        let player = selectedxOro=="x"?"o":"x";
+        playWithCPU(newBoard() ,player );
+        retriveElem();
+        val = checkingWin(board);
         declareWin(val);
     }
 }
-export {gridListener , board, XorO , val};
+export {gridListener,newBoard , board, XorO , val , turns , updateTurn , setID };
